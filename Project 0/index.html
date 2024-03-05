@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Search</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="anchor">
+            <a href="imgsrch.html" style="margin: 8px;">Collin Creevy</a>
+            <a href="advanced.html" style="margin: 8px;">Albus Dumbledore</a>
+        </div>
+        <br>
+        <div id="container">
+            <div id="logo">
+                <span class="B">P</span>
+                <span class="R">o</span>
+                <span class="Y">t</span>
+                <span class="B">t</span>
+                <span class="G">e</span>
+                <span class="R">r</span>
+            </div>
+            <div id="search">
+                <form action="https://www.google.com/search" method="get">
+                    <input type="text" name="q" id="searchbox" placeholder="Ask Hermione or say a spell" required>
+                    <br>
+                    <input type="submit" value="Ask Hermione" id="searchbutton">
+                    <input type="button" value="Felix Felicis"  id="lucky" onclick="feelingLucky()">
+                </form>
+            </div>
+        </div>
+        <script>
+            function feelingLucky() {
+                var query = document.getElementById('searchbox').value;
+                window.location.href = 'https://www.google.com/search?q=' + encodeURIComponent(query) + '&btnI';
+            }
+        </script>
+    </body>
+</html>
